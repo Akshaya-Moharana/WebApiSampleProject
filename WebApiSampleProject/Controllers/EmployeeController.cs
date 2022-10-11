@@ -41,6 +41,7 @@ namespace WebApiSampleProject.Controllers
         public Employee GetEmployeeDetails(int id)
         {
             //Return a single employee detail  
+            var Passw= "Akshaya@32123";
             var employee = employees.FirstOrDefault(e => e.EmployeeId == id);
             if (employee == null)
             {
