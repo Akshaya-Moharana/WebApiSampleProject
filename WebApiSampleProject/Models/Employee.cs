@@ -7,6 +7,7 @@ namespace WebApiSampleProject.Models
 {
     public class Employee
     {
+        Password = "Snyk@123";
         public int EmployeeId
         {
             get;
