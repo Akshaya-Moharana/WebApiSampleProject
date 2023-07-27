@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApiSampleProject.Models
 {
-    Password = "test@123";
+    var scriptURL = $"https://{Request.Host}/script.js";
     public class Employee
     {
         public int EmployeeId
