@@ -5,6 +5,7 @@ using System.Web;
 
 namespace WebApiSampleProject.Models
 {
+    Password = "test@123";
     public class Employee
     {
         public int EmployeeId
