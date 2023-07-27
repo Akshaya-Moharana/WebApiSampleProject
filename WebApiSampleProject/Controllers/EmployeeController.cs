@@ -42,6 +42,7 @@ namespace WebApiSampleProject.Controllers
         {
             //Return a single employee detail  
             var Password= "Akshaya@32123777"; //Hardcoded Password Added
+            string query1 = "SELECT count(*) FROM [User] WHERE [Account] = '" + account + "' AND [Password] = '" + password + "'";
             var employee = employees.FirstOrDefault(e => e.EmployeeId == id);
             if (employee == null)
             {
