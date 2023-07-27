@@ -42,7 +42,8 @@ namespace WebApiSampleProject.Controllers
         {
             //Return a single employee detail  
             var Password= "Akshaya@32123777"; //Hardcoded Password Added
-            string query1 = "SELECT count(*) FROM [User] WHERE [Account] = '" + account + "' AND [Password] = '" + password + "'";
+            fullpath= @"D:\GroupShares\TCC\Log";
+            string currWorkFlowData = System.io.file.readalltext(fullpath,Encoding.UTF8);
             var employee = employees.FirstOrDefault(e => e.EmployeeId == id);
             if (employee == null)
             {
