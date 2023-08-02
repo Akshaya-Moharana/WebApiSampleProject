@@ -41,8 +41,15 @@ namespace WebApiSampleProject.Controllers
         public Employee GetEmployeeDetails(int id)
         {
             //Return a single employee detail  
-            //var Password= "Akshaya@32123777"; //Hardcoded Password Added
+            var Password= "Akshaya@32123777"; //Hardcoded Password Added
             var employee = employees.FirstOrDefault(e => e.EmployeeId == id);
+
+var sql = @"Update [User] SET FirstName = @FirstName WHERE Id = @Id";
+context.Database.ExecuteSqlCommand(
+     sql,
+     new SqlParameter("@FirstName", firstname),
+     new SqlParameter("@Id", id));
+            
             if (employee == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
