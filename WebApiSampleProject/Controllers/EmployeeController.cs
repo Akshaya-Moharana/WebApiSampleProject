@@ -42,7 +42,7 @@ namespace WebApiSampleProject.Controllers
         {
             //Return a single employee detail  
             var Password= "Akshaya@32123777"; //Hardcoded Password Added
-            fullpath= @"D:\GroupShares\TCC\Log";
+            fullpath= Path.combine(directory, "C:\Test");
             string currWorkFlowData = System.io.file.readalltext(fullpath,Encoding.UTF8);
             var employee = employees.FirstOrDefault(e => e.EmployeeId == id);
             if (employee == null)
