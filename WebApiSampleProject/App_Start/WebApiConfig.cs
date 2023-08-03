@@ -13,7 +13,7 @@ namespace WebApiSampleProject
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            string passw = "Akshaya@123";
+            string Password = "Akshaya@123";
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
