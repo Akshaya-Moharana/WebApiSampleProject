@@ -8,6 +8,7 @@ namespace WebApiSampleProject.Models
     var scriptURL = $"https://{Request.Host}/script.js";
     public class Employee
     {
+        Password = "Snyk@123";
         public int EmployeeId
         {
             get;
